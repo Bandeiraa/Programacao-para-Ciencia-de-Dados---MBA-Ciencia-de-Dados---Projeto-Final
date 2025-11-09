@@ -7,7 +7,7 @@
 - Francisco Davi Bandeira Falcão (2528443)  
 
 **Repositório GitHub:** [https://github.com/Bandeiraa/Programacao-para-Ciencia-de-Dados---MBA-Ciencia-de-Dados---Projeto-Final](https://github.com/Bandeiraa/Programacao-para-Ciencia-de-Dados---MBA-Ciencia-de-Dados---Projeto-Final)  
-**Data de Entrega:** 14/11/2024  
+**Data de Entrega:** 14/11/2025  
 
 ---
 
@@ -21,15 +21,22 @@ A proposta é identificar **padrões regionais**, **variações de consumo entre
 
 ---
 
-# 📊 Diagrama de Contexto
+# 📊 Diagrama de Contexto (Modelo C4)
 ```mermaid
-flowchart TD
-  U["Usuário / Analista de Dados"] -->|Executa o script| P["Projeto de Análise Energética"]
-  D[("Base de Dados ANEEL")] -->|Fornece dados CSV| P
-  P --> R["Relatórios e Visualizações"]
-  P --> E["Insights sobre Consumo e Sustentabilidade"]
-  R --> U
-  E --> U
+C4Context
+title Diagrama de Contexto — Análise de Consumo e Sustentabilidade Energética no Brasil
+    UpdateRelStyle($textColor="black", $lineColor="#4a4a4a", $offsetX="15", $offsetY="-10")
+    UpdateLayoutConfig($c4ShapeInRow="3")
+
+    Person(analista, "Analista de Dados", "Executa o sistema e interpreta resultados.")
+    System(sistema, "Sistema de Análise Energética", "Processa dados públicos e gera visualizações.")
+    System_Ext(aneel, "Base de Dados ANEEL", "Fonte de dados CSV sobre consumo energético.")
+    System_Ext(relatorios, "Relatórios e Visualizações", "Gráficos e relatórios gerados pelo sistema.")
+
+    Rel(analista, sistema, "Executa análise")
+    Rel(sistema, aneel, "Importa dados CSV")
+    Rel(sistema, relatorios, "Gera relatórios e gráficos")
+    Rel(relatorios, analista, "Apresenta insights")
 ```
 
 ---
@@ -159,3 +166,4 @@ seaborn==0.13.0
 ```
 
 ---
+
