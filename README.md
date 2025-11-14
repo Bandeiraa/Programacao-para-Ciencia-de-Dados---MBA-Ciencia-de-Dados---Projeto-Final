@@ -1,4 +1,4 @@
-# 📋 Análise de Consumo e Sustentabilidade Energética no Brasil
+# Análise de Consumo e Sustentabilidade Energética no Brasil
 **Disciplina:** Programação para Ciência de Dados  
 **Curso:** MBA Ciência de Dados — UNIFOR  
 **Instrutor:** Cássio Pinheiro  
@@ -11,7 +11,7 @@
 
 ---
 
-# 🏹 Objetivo do Projeto
+# Objetivo do Projeto
 Este projeto tem como objetivo analisar o **consumo de energia elétrica no Brasil**, com foco em sustentabilidade e eficiência energética.  
 A proposta é identificar **padrões regionais**, **variações de consumo entre setores (residencial, comercial, industrial)** e **indicadores de eficiência energética**, utilizando ferramentas de análise de dados em Python.
 
@@ -21,7 +21,7 @@ A proposta é identificar **padrões regionais**, **variações de consumo entre
 
 ---
 
-# 📊 Diagrama de Contexto (Modelo C4)
+# Diagrama de Contexto (Modelo C4)
 ```mermaid
 C4Context
 title Diagrama de Contexto — Análise de Consumo e Sustentabilidade Energética no Brasil
@@ -41,7 +41,7 @@ title Diagrama de Contexto — Análise de Consumo e Sustentabilidade Energétic
 
 ---
 
-# 🔧 Funcionalidades Implementadas
+# Funcionalidades Implementadas
 | **Funcionalidade** | **Descrição** | **Módulos e Conceitos Utilizados** |
 |---------------------|---------------|------------------------------------|
 | **1. Leitura e Importação de Dados** | Leitura de arquivos CSV fornecidos pela ANEEL, contendo dados de consumo elétrico por tipo de consumidor, região e ano. Inclui verificação de existência do arquivo e tratamento básico de erros. | **Módulo 1:** uso de `open()` e estruturas de dados (`dict`, `list`); tratamento de exceções com `try/except`. <br> **Módulo 2:** uso de `pandas.read_csv()` para importação otimizada. |
@@ -55,7 +55,7 @@ title Diagrama de Contexto — Análise de Consumo e Sustentabilidade Energétic
 
 ---
 
-# 📦 Estrutura de Dados
+# Estrutura de Dados
 ## Estruturas de Entrada
 Os dados utilizados neste projeto são obtidos a partir dos **datasets públicos da ANEEL**, contendo informações de consumo energético em formato **CSV**.
 
@@ -74,8 +74,6 @@ Cada linha do arquivo representa um registro de consumo, associado a uma região
 📄 **Formato:** `CSV` (valores separados por vírgula)  
 📦 **Localização:** pasta `/dados/consumo_energia_brasil.csv`  
 
----
-
 ## Estruturas de Dados Internas
 Durante o processamento, os dados serão manipulados em diferentes estruturas:
 
@@ -87,8 +85,6 @@ Durante o processamento, os dados serão manipulados em diferentes estruturas:
 | `numpy.ndarray` | Aplicação de operações matemáticas vetorizadas | `np.mean(df["Consumo_kWh"])` |
 
 Essas estruturas permitem uma manipulação eficiente dos dados, simplificando a limpeza, agregação e análise estatística.
-
----
 
 ## Estruturas de Saída
 Os resultados do projeto serão gerados em três formatos principais:
@@ -107,8 +103,6 @@ relatorios/
 └── correlacao_consumo_pib.png
 ```
 
----
-
 ## Fluxo de Dados Resumido
 ```mermaid
 flowchart LR
@@ -119,13 +113,11 @@ flowchart LR
 
 ---
 
-# 💻 Requisitos Técnicos
+# Requisitos Técnicos
 ## Versão do Python
 ```txt
 Python 3.11 ou superior
 ```
-
----
 
 ## Bibliotecas Utilizadas
 | Biblioteca | Versão Recomendada | Finalidade Principal |
@@ -137,8 +129,6 @@ Python 3.11 ou superior
 | **os** | (nativa) | Manipulação de diretórios, verificação e criação de pastas. |
 | **pathlib** | (nativa) | Gerenciamento de caminhos de arquivos de forma estruturada e multiplataforma. |
 | **warnings** | (nativa) | Controle e filtragem de alertas durante a execução do código. |
-
----
 
 ## Como Instalar as Dependências
 #### Clonar o Repositório
@@ -167,3 +157,124 @@ seaborn==0.13.0
 
 ---
 
+# Como Executar o Projeto
+## Ativar o ambiente virtual (Opcional)
+**Windows:**
+```bash
+.\.venv\Scripts\activate
+```
+
+**Linux/Mac:**
+```bash
+source .venv/bin/activate
+```
+
+## Instalar as Dependências
+```bash
+pip install -r requirements.txt
+```
+
+## Executar a main.py OU main.ipynb
+```bash
+python main.py OU
+python main.ipynb
+```
+
+## Relatórios
+Após a execução, o sistema criará os seguintes arquivos em /relatorios/:
+
+```text
+relatorios/
+├── resultados_analise.txt
+├── consumo_regional.png
+└── correlacao_consumo_pib.png
+```
+
+---
+
+# Análises Realizadas
+### Estatísticas Gerais
+- Consumo total
+- Consumo médio
+- Desvio padrão
+- Correlação entre consumo, PIB e consumo per capita
+
+### Análises Regionais
+- Consumo médio por região
+- Comparação entre tipos de consumidores
+
+### Visualizações
+- Gráfico de barras (consumo por região)
+- Heatmap (correlações)
+
+---
+
+# Estrutura do Projeto
+```
+Programacao-para-Ciencia-de-Dados/
+├── main.py
+├── main.ipynb
+├── dados/
+│   └── consumo_energia_brasil.csv
+├── src/
+│   ├── leitura_dados.py
+│   ├── tratamento_dados.py
+│   ├── analise_estatistica.py
+│   ├── visualizacoes.py
+│   └── relatorios.py
+├── relatorios/
+│   ├── consumo_regional.png
+│   ├── correlacao_consumo_pib.png
+│   └── resultados_analise.txt
+└── requirements.txt
+```
+
+---
+
+# Exemplos de Saída
+## Consumo Médio por região
+![Consumo por Região](relatorios/consumo_regional.png)
+
+## Correlação Consumo PIB
+![Correlação Consumo PIB](relatorios/correlacao_consumo_pib.png)
+
+## Análise Descritiva
+```
+consumo_medio: 19188.3
+consumo_total: 191883.0
+desvio_padrao: 16230.744393485675
+correlacao_consumo_pib: 0.864135540391673
+consumo_por_regiao: {'Centro-Oeste': 27791.0, 'Nordeste': 17442.0, 'Norte': 21255.0, 'Sudeste': 99530.0, 'Sul': 25865.0}
+```
+
+---
+
+# Testes Realizados
+| Teste | Resultado |
+|-------|-----------|
+| Importação do CSV | ✔️ |
+| Limpeza dos dados | ✔️ |
+| Estatísticas | ✔️ |
+| Geração dos gráficos | ✔️ |
+| Relatório final | ✔️ |
+| Execução de ponta a ponta | ✔️ |
+
+---
+
+# Referências
+- ANEEL – Dados Abertos  
+- IBGE – Indicadores Econômicos  
+- Documentação oficial das bibliotecas utilizadas
+
+---
+
+# Contribuições
+- **Francisco Davi Bandeira Falcão (2528443)**
+
+---
+
+# Próximos Passos
+- Dashboard interativo  
+- Previsão de consumo com modelos estatísticos  
+- Análises sazonais com dados climáticos  
+- Expansão dos conjuntos de dados  
