@@ -11,7 +11,7 @@ def ler_dados_csv(caminho_arquivo: str) -> list:
                 dados.append(linha)
 
         return dados
-    
+        
     except FileNotFoundError:
         print(f"Erro: Arquivo '{caminho_arquivo}' não encontrado.")
         return []
