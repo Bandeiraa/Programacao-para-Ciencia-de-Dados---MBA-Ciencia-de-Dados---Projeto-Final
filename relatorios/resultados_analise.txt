@@ -1,0 +1,7 @@
+=== Relatório de Análise Energética ===
+
+consumo_medio: 19188.3
+consumo_total: 191883.0
+desvio_padrao: 16230.744393485675
+correlacao_consumo_pib: 0.864135540391673
+consumo_por_regiao: {'Centro-Oeste': 27791.0, 'Nordeste': 17442.0, 'Norte': 21255.0, 'Sudeste': 99530.0, 'Sul': 25865.0}

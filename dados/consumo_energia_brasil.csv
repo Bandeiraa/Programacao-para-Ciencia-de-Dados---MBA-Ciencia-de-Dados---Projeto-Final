@@ -1,0 +1,11 @@
+Região,Tipo_Consumidor,Ano,Consumo_kWh,População,PIB_per_capita
+Norte,Residencial,2021,10234,18000000,23100
+Nordeste,Comercial,2021,8421,53000000,19800
+Sudeste,Industrial,2021,49320,88000000,46000
+Sul,Residencial,2021,12654,30000000,32000
+Centro-Oeste,Comercial,2021,13789,16000000,35000
+Norte,Residencial,2022,11021,18100000,23300
+Nordeste,Comercial,2022,9021,53100000,20000
+Sudeste,Industrial,2022,50210,88100000,46200
+Sul,Residencial,2022,13211,30100000,32200
+Centro-Oeste,Comercial,2022,14002,16100000,35100
